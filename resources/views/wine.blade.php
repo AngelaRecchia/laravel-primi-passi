@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Primi Passi</title>
+        <title>{{$title}}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -71,14 +71,10 @@
                     {{$title}}
                 </div>
 
-                <div class="links">
-
-                    <a href="{{route('food')}}">{{$s1}}</a>
-                    <a href="{{route('wine')}}">{{$s2}}</a>
-                    <a href="{{route('fragrance')}}">{{$s3}}</a>
-                    <a href="{{route('coffee')}}">{{$s4}}</a>
-                    
-                </div>
+                @foreach($p as $par) 
+                    <p>{{$par}}</p>
+                
+                @endforeach
 
             </div>
         </div>
